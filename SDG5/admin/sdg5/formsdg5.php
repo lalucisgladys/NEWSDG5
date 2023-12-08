@@ -54,7 +54,6 @@ include '../../includes/db.php';?>
                 <li class="text-center"><button class="btn btn-dark w-100 mb-2" id="res573"> Reports against sexual harrasment</button></li>
                 <li class="text-center"><button class="btn btn-dark w-100 mb-2" id="res574"> VAW desk amd officer</button></li>
                 <li class="text-center"><button class="btn btn-dark w-100 mb-2" id="res575"> Reports on VAWC cases</button></li>
-                <li class="text-center"><button class="btn btn-dark w-100 mb-2" id="res576"> Statistics on abuse</button></li>
                 <li class="text-center"><button class="btn btn-dark w-100 mb-2" id="res5761"> Students</button></li>
                 <li class="text-center"><button class="btn btn-dark w-100 mb-2" id="res5762"> Employees</button></li>
                 <li class="text-center"><button class="btn btn-dark w-100 mb-2" id="res581"> GAD Plan and Budget</button></li>
@@ -190,35 +189,35 @@ include '../../includes/db.php';?>
                     <!--This div is for research 5.3.4-->
                     <div class=" w-100 h-auto" id="research534" style="display: none;">
                         <h2 class="text-center pb-4">Women's access schemes (Internal/External)</h2>
-                        <form action="" method="post">
+                        <form action="../../admin/sdg5/insert/insert534.php" method="post">
 
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
-                                <input type="text" class="form-control" placeholder="Total number of other PPAs exclusively for women" name="title">
+                                <input type="text" class="form-control" placeholder="Total number of other PPAs exclusively for women" name="no_ppa_women">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
-                                <input type="text" class="form-control" placeholder="Number of Internal PPAs" name="author">
+                                <input type="text" class="form-control" placeholder="Number of Internal PPAs" name="no_internal_ppa">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
-                                <input type="text" class="form-control" placeholder="Number of External PPAs" name="year_pub">
+                                <input type="text" class="form-control" placeholder="Number of External PPAs" name="no_external_ppa">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
-                                <input type="text" class="form-control" placeholder="Title of the PPA" name="no_clinical">
+                                <input type="text" class="form-control" placeholder="Title of the PPA" name="title_ppa">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                <input type="email" class="form-control" placeholder="Short description of the PPA" name="no_citations">
+                                <input type="text" class="form-control" placeholder="Short description of the PPA" name="description_ppa">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-building"></i></span>
-                                <input type="text" class="form-control" placeholder="Total cost" name="no_Clinical">
+                                <input type="text" class="form-control" placeholder="Total cost" name="total_cost">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-building"></i></span>
-                                <input type="text" class="form-control" placeholder="Fund source" name="no_Citations">
+                                <input type="text" class="form-control" placeholder="Fund source" name="fund_source">
                             </div>
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-success mb-3" name="submit">Add
@@ -230,47 +229,27 @@ include '../../includes/db.php';?>
                     <!--This div is for research 5.3.5-->
                     <div class=" w-100 h-auto" id="research535" style="display: none;">
                         <h2 class="text-center pb-4">Women's application in underrepresented subjects</h2>
-                        <form action="" method="post">
+                        <form action="../../admin/sdg5/insert/insert535.php" method="post">
 
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
-                                <input type="text" class="form-control" placeholder="Total number of PPAs t encourage women's application in underrepresented subjects" name="title">
+                                <input type="text" class="form-control" placeholder="Total number of PPAs t encourage women's application in underrepresented subjects" name="no_encourage_woman">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
-                                <input type="text" class="form-control" placeholder="Title of the PPA" name="author">
+                                <input type="text" class="form-control" placeholder="Title of the PPA" name="title_ppa">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
-                                <input type="text" class="form-control" placeholder="Short description of the PPA" name="year_pub">
+                                <input type="text" class="form-control" placeholder="Short description of the PPA" name="description_ppa">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
-                                <input type="text" class="form-control" placeholder="Total cost" name="no_clinical">
+                                <input type="text" class="form-control" placeholder="Total cost" name="total_cost1">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                <input type="email" class="form-control" placeholder="Fund source" name="no_citations">
-                            </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text"><i class="bi bi-building"></i></span>
-                                <input type="text" class="form-control" placeholder="Categorized as local, national, global" name="no_citations">
-                            </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text"><i class="bi bi-building"></i></span>
-                                <input type="text" class="form-control" placeholder="Number of years in collaboration" name="no_citations">
-                            </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text"><i class="bi bi-building"></i></span>
-                                <input type="text" class="form-control" placeholder="Title and description of collab project" name="no_citations">
-                            </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text"><i class="bi bi-building"></i></span>
-                                <input type="text" class="form-control" placeholder="Total cost" name="no_citations">
-                            </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text"><i class="bi bi-building"></i></span>
-                                <input type="text" class="form-control" placeholder="Fund source" name="no_citations">
+                                <input type="text" class="form-control" placeholder="Fund source" name="fund_source1">
                             </div>
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-success mb-3" name="submit">Add
@@ -282,19 +261,19 @@ include '../../includes/db.php';?>
                     <!--This div is for research 5.4.1-->
                     <div class=" w-100 h-auto" id="research541" style="display: none;">
                         <h2 class="text-center pb-4">Proportion of senior female academics</h2>
-                        <form action="" method="post">
+                        <form action="../../admin/sdg5/insert/insert541.php" method="post">
 
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
-                                <input type="text" class="form-control" placeholder="Total number of employees" name="title">
+                                <input type="text" class="form-control" placeholder="Total number of employees" name="no_employees">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
-                                <input type="text" class="form-control" placeholder="Total number of academic/teaching staff" name="author">
+                                <input type="text" class="form-control" placeholder="Total number of academic/teaching staff" name="academic_teaching_staff">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
-                                <input type="text" class="form-control" placeholder="Total number of senior academic staff" name="year_pub">
+                                <input type="text" class="form-control" placeholder="Total number of senior academic staff" name="senior_staff">
                             </div>
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-success mb-3" name="submit">Add
@@ -306,11 +285,11 @@ include '../../includes/db.php';?>
                     <!--This div is for research 5.5.1-->
                     <div class=" w-100 h-auto" id="research551" style="display: none;">
                         <h2 class="text-center pb-4">Proportion of female graduates</h2>
-                        <form action="" method="post">
+                        <form action="../../admin/sdg5/insert/insert551.php" method="post">
 
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
-                                <input type="text" class="form-control" placeholder="Total number of graduates" name="title">
+                                <input type="text" class="form-control" placeholder="Total number of graduates" name="total_graduates">
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-success mb-3" name="submit">Add
                                     Research</button>
@@ -321,11 +300,11 @@ include '../../includes/db.php';?>
                     <!--This div is for research 5.5.2-->
                     <div class=" w-100 h-auto" id="research552" style="display: none;">
                         <h2 class="text-center pb-4">Proportion of applicants for graduation to total number of graduates</h2>
-                        <form action="" method="post">
+                        <form action="../../admin/sdg5/insert/insert552.php" method="post">
 
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
-                                <input type="text" class="form-control" placeholder="Total number of applicants for graduation" name="title">
+                                <input type="text" class="form-control" placeholder="Total number of applicants for graduation" name="applicants_for_graduation">
                             </div>
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-success mb-3" name="submit">Add
@@ -337,19 +316,19 @@ include '../../includes/db.php';?>
                     <!--This div is for research 5.5.3-->
                     <div class=" w-100 h-auto" id="research553" style="display: none;">
                         <h2 class="text-center pb-4">Number of graduates by broad subject areas</h2>
-                        <form action="" method="post">
+                        <form action="../../admin/sdg5/insert/insert553.php" method="post">
 
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
-                                <input type="text" class="form-control" placeholder="Total number of graduates in STEM" name="title">
+                                <input type="text" class="form-control" placeholder="Total number of graduates in STEM" name="total_no_STEM">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
-                                <input type="text" class="form-control" placeholder="Total number of graduates in Medicine" name="author">
+                                <input type="text" class="form-control" placeholder="Total number of graduates in Medicine" name="no_graduate_medicine">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
-                                <input type="text" class="form-control" placeholder="Total number of graduates in Arts and Humanities/Social Sciences" name="year_pub">
+                                <input type="text" class="form-control" placeholder="Total number of graduates in Arts and Humanities/Social Sciences" name="no_art_humanities">
                             </div>
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-success mb-3" name="submit">Add
@@ -361,27 +340,27 @@ include '../../includes/db.php';?>
                     <!--This div is for research 5.6.1-->
                     <div class=" w-100 h-auto" id="research561" style="display: none;">
                         <h2 class="text-center pb-4">Policy of non-discrimination against women</h2>
-                        <form action="" method="post">
+                        <form action="../../admin/sdg5/insert/insert561.php" method="post">
 
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
-                                <input type="text" class="form-control" placeholder="Total number of non-discrimination against women policy" name="title">
+                                <input type="text" class="form-control" placeholder="Total number of non-discrimination against women policy" name="no_non_discrimination">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
-                                <input type="text" class="form-control" placeholder="Total number of PPAs implemented in aacordance to the policy" name="author">
+                                <input type="text" class="form-control" placeholder="Total number of PPAs implemented in aacordance to the policy" name="no_ppa_implemented">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
-                                <input type="text" class="form-control" placeholder="Title of the PPA" name="year_pub">
+                                <input type="text" class="form-control" placeholder="Title of the PPA" name="title_ppa">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
-                                <input type="text" class="form-control" placeholder="Short description of the PPA" name="no_clinical">
+                                <input type="text" class="form-control" placeholder="Short description of the PPA" name="description_ppa">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                <input type="email" class="form-control" placeholder="Total cost" name="no_citations">
+                                <input type="text" class="form-control" placeholder="Total cost" name="total_cost">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-building"></i></span>
@@ -417,7 +396,7 @@ include '../../includes/db.php';?>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                <input type="email" class="form-control" placeholder="Total Cost" name="no_citations">
+                                <input type="text" class="form-control" placeholder="Total Cost" name="no_citations">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-building"></i></span>
@@ -453,7 +432,7 @@ include '../../includes/db.php';?>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                <input type="email" class="form-control" placeholder="Total Cost" name="no_citations">
+                                <input type="text" class="form-control" placeholder="Total Cost" name="no_citations">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-building"></i></span>
@@ -489,7 +468,7 @@ include '../../includes/db.php';?>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                <input type="email" class="form-control" placeholder="Total number of solo parent leave availde in the campus" name="no_citations">
+                                <input type="text" class="form-control" placeholder="Total number of solo parent leave availde in the campus" name="no_citations">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-building"></i></span>
@@ -542,7 +521,7 @@ include '../../includes/db.php';?>
                             <p class="text-center lead">List of collaborations with health institutions</p>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                <input type="email" class="form-control" placeholder="Total number of employees who are children of solo parent" name="no_citations">
+                                <input type="text" class="form-control" placeholder="Total number of employees who are children of solo parent" name="no_citations">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-building"></i></span>
@@ -610,7 +589,7 @@ include '../../includes/db.php';?>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                <input type="email" class="form-control" placeholder="Fund source" name="no_citations">
+                                <input type="text" class="form-control" placeholder="Fund source" name="no_citations">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
@@ -630,11 +609,11 @@ include '../../includes/db.php';?>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                <input type="email" class="form-control" placeholder="Fund source" name="fund_source">
+                                <input type="text" class="form-control" placeholder="Fund source" name="fund_source">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                <input type="email" class="form-control" placeholder="Total number of female employees who participate in the mentoring schemes" name="total_employees">
+                                <input type="text" class="form-control" placeholder="Total number of female employees who participate in the mentoring schemes" name="total_employees">
                             </div>
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-success mb-3" name="submit">Add
@@ -666,7 +645,7 @@ include '../../includes/db.php';?>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                <input type="email" class="form-control" placeholder="Total Cost" name="no_citations">
+                                <input type="text" class="form-control" placeholder="Total Cost" name="no_citations">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-building"></i></span>
@@ -742,7 +721,7 @@ include '../../includes/db.php';?>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                <input type="email" class="form-control" placeholder="Fund Source" name="no_citations">
+                                <input type="text" class="form-control" placeholder="Fund Source" name="no_citations">
                             </div>
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-success mb-3" name="submit">Add
@@ -811,18 +790,6 @@ include '../../includes/db.php';?>
                         </form>
                     </div>
 
-                    <!--This div is for research 5.7.6-->
-                    <div class=" w-100 h-auto" id="research576" style="display: none;">
-                        <h2 class="text-center pb-4">Statistics on abuse</h2>
-                        <form action="" method="post">
-
-                            <div class="d-grid">
-                                <button type="submit" class="btn btn-success mb-3" name="submit">Add
-                                    Research</button>
-                            </div>
-                        </form>
-                    </div>
-
                     <!--This div is for research 5.7.6.1-->
                     <div class=" w-100 h-auto" id="research5761" style="display: none;">
                         <h2 class="text-center pb-4">Students</h2>
@@ -847,7 +814,7 @@ include '../../includes/db.php';?>
                             <p class="text-center lead">List of collaborations with health institutions</p>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                <input type="email" class="form-control" placeholder="Total number of students who confide the abuse to trusted person" name="no_citations">
+                                <input type="text" class="form-control" placeholder="Total number of students who confide the abuse to trusted person" name="no_citations">
                             </div>
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-success mb-3" name="submit">Add
@@ -880,7 +847,7 @@ include '../../includes/db.php';?>
                             <p class="text-center lead">List of collaborations with health institutions</p>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                <input type="email" class="form-control" placeholder="Total number of employees who confide the abuse to trusted person" name="no_citations">
+                                <input type="text" class="form-control" placeholder="Total number of employees who confide the abuse to trusted person" name="no_citations">
                             </div>
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-success mb-3" name="submit">Add
@@ -952,7 +919,7 @@ include '../../includes/db.php';?>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                <input type="email" class="form-control" placeholder="Total Cost" name="no_citations">
+                                <input type="text" class="form-control" placeholder="Total Cost" name="no_citations">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-building"></i></span>
@@ -988,7 +955,7 @@ include '../../includes/db.php';?>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                <input type="email" class="form-control" placeholder="Fund Source" name="no_citations">
+                                <input type="text" class="form-control" placeholder="Fund Source" name="no_citations">
                             </div>
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-success mb-3" name="submit">Add

@@ -242,6 +242,346 @@ include("../../includes/db.php");
             </table>
         </div>
 
+        <!--res 5.3.4-->
+        <div class=" w-100 h-auto mt-3" id="research534" style="display: none ;">
+            <table class="table table-striped table-bordered table-hover ">
+                <thead class="table-dark text-center">
+                    <tr>
+                        <th scope="col" colspan="2">Action</th>
+                        <th scope="col">Total number of other PPAs exclusively for women</th>
+                        <th scope="col">Number of Internal PPAs</th>
+                        <th scope="col">Number of External PPAs</th>
+                        <th scope="col">Title of the PPA</th>
+                        <th scope="col">Short description of the PPA</th>
+                        <th scope="col">Total cost</th>
+                        <th scope="col">Fund source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $sql = "SELECT * FROM `research5.3.4`";
+                    $select = mysqli_query($conn, $sql);
+
+                    if (mysqli_num_rows($select) > 0) {
+                        while ($row = mysqli_fetch_assoc($select)) {
+                            $id_res534 = $row['ID'];
+                            $no_ppa_women = $row['no_ppa_women'];
+                            $no_internal_ppa = $row['no_internal_ppa'];
+                            $no_external_ppa = $row['no_external_ppa'];
+                            $title_ppa = $row['title_ppa'];
+                            $description_ppa = $row['description_ppa'];
+                            $total_cost = $row['total_cost'];
+                            $fund_source = $row['fund_source'];
+
+                    ?>
+                    <tr>
+                    <td class="text-center">
+                            <a href="../../admin/sdg5/delete/delete534.php?delete=<?php echo $id_res534 ?>"
+                                class="btn btn-danger"
+                                onclick="return confirm('Are you sure to delete this?')">Delete</a>
+                        </td>
+                        <td class="text-center">
+                            <a href="../../admin/sdg5/update/update534.php?update=<?php echo $id_res534 ?>"
+                                class="btn btn-success">Update</a>
+                        </td>
+                        <td class="text-center"><?php echo $no_ppa_women ?></td>
+                        <td class="text-center"><?php echo $no_internal_ppa ?></td>
+                        <td class="text-center"><?php echo $no_external_ppa ?></td>
+                        <td class="text-center"><?php echo $title_ppa ?></td>
+                        <td class="text-center"><?php echo $description_ppa ?></td>
+                        <td class="text-center"><?php echo $total_cost ?></td>
+                        <td class="text-center"><?php echo $fund_source ?></td>
+                    </tr>
+                    <?php
+                        }
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+
+        <!--res 5.3.5-->
+        <div class=" w-100 h-auto mt-3" id="research535" style="display: none ;">
+            <table class="table table-striped table-bordered table-hover ">
+                <thead class="table-dark text-center">
+                    <tr>
+                        <th scope="col" colspan="2">Action</th>
+                        <th scope="col">Total number of PPAs t encourage women's application in underrepresented subjects</th>
+                        <th scope="col">Title of the PPA</th>
+                        <th scope="col">Short description of the PPA</th>
+                        <th scope="col">Total cost</th>
+                        <th scope="col">Fund source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $sql = "SELECT * FROM `research5.3.5`";
+                    $select = mysqli_query($conn, $sql);
+
+                    if (mysqli_num_rows($select) > 0) {
+                        while ($row = mysqli_fetch_assoc($select)) {
+                            $id_res535 = $row['ID'];
+                            $no_encourage_woman = $row['no_encourage_woman'];
+                            $title_ppa = $row['title_ppa'];
+                            $description_ppa = $row['description_ppa'];
+                            $total_cost1 = $row['total_cost1'];
+                            $fund_source1 = $row['fund_source1'];
+
+                    ?>
+                    <tr>
+                    <td class="text-center">
+                            <a href="../../admin/sdg5/delete/delete535.php?delete=<?php echo $id_res535 ?>"
+                                class="btn btn-danger"
+                                onclick="return confirm('Are you sure to delete this?')">Delete</a>
+                        </td>
+                        <td class="text-center">
+                            <a href="../../admin/sdg5/update/update535.php?update=<?php echo $id_res535 ?>"
+                                class="btn btn-success">Update</a>
+                        </td>
+                        <td class="text-center"><?php echo $no_encourage_woman ?></td>
+                        <td class="text-center"><?php echo $no_internal_ppa ?></td>
+                        <td class="text-center"><?php echo $no_external_ppa ?></td>
+                        <td class="text-center"><?php echo $title_ppa ?></td>
+                        <td class="text-center"><?php echo $description_ppa ?></td>
+                        <td class="text-center"><?php echo $total_cost1 ?></td>
+                        <td class="text-center"><?php echo $fund_source1 ?></td>
+                    </tr>
+                    <?php
+                        }
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+
+        <!--res 5.4.1-->
+        <div class=" w-100 h-auto mt-3" id="research541" style="display: none ;">
+            <table class="table table-striped table-bordered table-hover ">
+                <thead class="table-dark text-center">
+                    <tr>
+                        <th scope="col" colspan="2">Action</th>
+                        <th scope="col">Total number of employees</th>
+                        <th scope="col">Total number of academic/teaching staff</th>
+                        <th scope="col">Total number of senior academic staff</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $sql = "SELECT * FROM `research5.4.1`";
+                    $select = mysqli_query($conn, $sql);
+
+                    if (mysqli_num_rows($select) > 0) {
+                        while ($row = mysqli_fetch_assoc($select)) {
+                            $id_res541 = $row['ID'];
+                            $no_employees = $row['no_employees'];
+                            $academic_teaching_staff = $row['academic_teaching_staff'];
+                            $senior_staff = $row['senior_staff'];
+
+                    ?>
+                    <tr>
+                    <td class="text-center">
+                            <a href="../../admin/sdg5/delete/delete541.php?delete=<?php echo $id_res541 ?>"
+                                class="btn btn-danger"
+                                onclick="return confirm('Are you sure to delete this?')">Delete</a>
+                        </td>
+                        <td class="text-center">
+                            <a href="../../admin/sdg5/update/update541.php?update=<?php echo $id_res541 ?>"
+                                class="btn btn-success">Update</a>
+                        </td>
+                        <td class="text-center"><?php echo $no_employees ?></td>
+                        <td class="text-center"><?php echo $academic_teaching_staff ?></td>
+                        <td class="text-center"><?php echo $senior_staff ?></td>
+                    </tr>
+                    <?php
+                        }
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+
+        <!--res 5.5.1-->
+        <div class=" w-100 h-auto mt-3" id="research551" style="display: none ;">
+            <table class="table table-striped table-bordered table-hover ">
+                <thead class="table-dark text-center">
+                    <tr>
+                        <th scope="col" colspan="2">Action</th>
+                        <th scope="col">Total number of graduates</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $sql = "SELECT * FROM `research5.5.1`";
+                    $select = mysqli_query($conn, $sql);
+
+                    if (mysqli_num_rows($select) > 0) {
+                        while ($row = mysqli_fetch_assoc($select)) {
+                            $id_res551 = $row['ID'];
+                            $total_graduates = $row['total_graduates'];
+
+                    ?>
+                    <tr>
+                    <td class="text-center">
+                            <a href="../../admin/sdg5/delete/delete551.php?delete=<?php echo $id_res551 ?>"
+                                class="btn btn-danger"
+                                onclick="return confirm('Are you sure to delete this?')">Delete</a>
+                        </td>
+                        <td class="text-center">
+                            <a href="../../admin/sdg5/update/update551.php?update=<?php echo $id_res551 ?>"
+                                class="btn btn-success">Update</a>
+                        </td>
+                        <td class="text-center"><?php echo $total_graduates ?></td>
+                    </tr>
+                    <?php
+                        }
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+
+        <!--res 5.5.2-->
+        <div class=" w-100 h-auto mt-3" id="research552" style="display: none ;">
+            <table class="table table-striped table-bordered table-hover ">
+                <thead class="table-dark text-center">
+                    <tr>
+                        <th scope="col" colspan="2">Action</th>
+                        <th scope="col">Total number of applicants for graduation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $sql = "SELECT * FROM `research5.5.2`";
+                    $select = mysqli_query($conn, $sql);
+
+                    if (mysqli_num_rows($select) > 0) {
+                        while ($row = mysqli_fetch_assoc($select)) {
+                            $id_res552 = $row['ID'];
+                            $applicants_for_graduation = $row['applicants_for_graduation'];
+
+                    ?>
+                    <tr>
+                    <td class="text-center">
+                            <a href="../../admin/sdg5/delete/delete552.php?delete=<?php echo $id_res552 ?>"
+                                class="btn btn-danger"
+                                onclick="return confirm('Are you sure to delete this?')">Delete</a>
+                        </td>
+                        <td class="text-center">
+                            <a href="../../admin/sdg5/update/update552.php?update=<?php echo $id_res552 ?>"
+                                class="btn btn-success">Update</a>
+                        </td>
+                        <td class="text-center"><?php echo $applicants_for_graduation ?></td>
+                    </tr>
+                    <?php
+                        }
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+
+        <!--res 5.5.3-->
+        <div class=" w-100 h-auto mt-3" id="research553" style="display: none ;">
+            <table class="table table-striped table-bordered table-hover ">
+                <thead class="table-dark text-center">
+                    <tr>
+                        <th scope="col" colspan="2">Action</th>
+                        <th scope="col">Total number of graduates in STEM</th>
+                        <th scope="col">Total number of graduates in Medicine</th>
+                        <th scope="col">Total number of graduates in Arts and Humanities/Social Sciences</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $sql = "SELECT * FROM `research5.5.3`";
+                    $select = mysqli_query($conn, $sql);
+
+                    if (mysqli_num_rows($select) > 0) {
+                        while ($row = mysqli_fetch_assoc($select)) {
+                            $id_res552 = $row['ID'];
+                            $total_no_STEM = $row['total_no_STEM'];
+                            $no_graduate_medicine = $row['no_graduate_medicine'];
+                            $no_art_humanities = $row['no_art_humanities'];
+
+                    ?>
+                    <tr>
+                    <td class="text-center">
+                            <a href="../../admin/sdg5/delete/delete553.php?delete=<?php echo $id_res553 ?>"
+                                class="btn btn-danger"
+                                onclick="return confirm('Are you sure to delete this?')">Delete</a>
+                        </td>
+                        <td class="text-center">
+                            <a href="../../admin/sdg5/update/update553.php?update=<?php echo $id_res553 ?>"
+                                class="btn btn-success">Update</a>
+                        </td>
+                        <td class="text-center"><?php echo $total_no_STEM ?></td>
+                        <td class="text-center"><?php echo $no_graduate_medicine ?></td>
+                        <td class="text-center"><?php echo $no_art_humanities ?></td>
+                    </tr>
+                    <?php
+                        }
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+
+        <!--res 5.6.1-->
+        <div class=" w-100 h-auto mt-3" id="research561" style="display: none ;">
+            <table class="table table-striped table-bordered table-hover ">
+                <thead class="table-dark text-center">
+                    <tr>
+                        <th scope="col" colspan="2">Action</th>
+                        <th scope="col">Total number of non-discrimination against women policy</th>
+                        <th scope="col">Total number of PPAs implemented in aacordance to the policy</th>
+                        <th scope="col">Title of the PPA</th>
+                        <th scope="col">Short description of the PPA</th>
+                        <th scope="col">Total cost</th>
+                        <th scope="col">Fund source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $sql = "SELECT * FROM `research5.6.1`";
+                    $select = mysqli_query($conn, $sql);
+
+                    if (mysqli_num_rows($select) > 0) {
+                        while ($row = mysqli_fetch_assoc($select)) {
+                            $id_res561 = $row['ID'];
+                            $no_non_discrimination = $row['no_non_discrimination'];
+                            $no_ppa_implemented = $row['no_ppa_implemented'];
+                            $title_ppa = $row['title_ppa'];
+                            $description_ppa = $row['description_ppa'];
+                            $total_cost = $row['total_cost'];
+                            $fund_source = $row['fund_source'];
+
+                    ?>
+                    <tr>
+                    <td class="text-center">
+                            <a href="../../admin/sdg5/delete/delete561.php?delete=<?php echo $id_res561 ?>"
+                                class="btn btn-danger"
+                                onclick="return confirm('Are you sure to delete this?')">Delete</a>
+                        </td>
+                        <td class="text-center">
+                            <a href="../../admin/sdg5/update/update561.php?update=<?php echo $id_res561 ?>"
+                                class="btn btn-success">Update</a>
+                        </td>
+                        <td class="text-center"><?php echo $no_non_discrimination ?></td>
+                        <td class="text-center"><?php echo $no_ppa_implemented ?></td>
+                        <td class="text-center"><?php echo $title_ppa ?></td>
+                        <td class="text-center"><?php echo $description_ppa ?></td>
+                        <td class="text-center"><?php echo $total_cost ?></td>
+                        <td class="text-center"><?php echo $fund_source ?></td>
+                    </tr>
+                    <?php
+                        }
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+
+
     </div>
 </div>
 

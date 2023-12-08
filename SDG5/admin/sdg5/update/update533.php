@@ -26,7 +26,7 @@ if (isset($_GET['update'])) {
             $no_ppa = $row['no_ppa'];
 ?>
 <div class=" w-100 h-auto" id="research533" style="display: block;">
-                        <h2 class="text-center pb-4"> Policy for women applications and entry</h2>
+                        <h2 class="text-center pb-4"> Women's access schemes (Internal/External)</h2>
                         <form action="" method="post">
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class=""></i></span>
