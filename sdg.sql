@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2023 at 01:52 PM
+-- Generation Time: Dec 08, 2023 at 11:05 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -41,7 +41,8 @@ CREATE TABLE `research5.1.1` (
 --
 
 INSERT INTO `research5.1.1` (`ID`, `total_no_published_research`, `title`, `author`, `year_pub`, `no_clinical`) VALUES
-(0, '', 'Gender Based Law', 'Risa Hontiveros', 2023, 12);
+(1, '12', 'Gender Based Law', 'Risa Hontiveros', 2023, 12),
+(2, '', 'Gender Based Law', 'Risa Hontiveros', 2023, 12);
 
 -- --------------------------------------------------------
 
@@ -62,7 +63,10 @@ CREATE TABLE `research5.2.1` (
 INSERT INTO `research5.2.1` (`ID`, `no_starting_deg`, `no_first_start_deg`) VALUES
 (1, '12', 12),
 (2, '', 14),
-(3, '14', 15);
+(3, '14', 15),
+(4, '', 16),
+(5, '13', 15),
+(6, '12', 13);
 
 -- --------------------------------------------------------
 
@@ -77,6 +81,13 @@ CREATE TABLE `research5.3.1` (
   `no_enrollees` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `research5.3.1`
+--
+
+INSERT INTO `research5.3.1` (`ID`, `no_college_applicants`, `no_admitted`, `no_enrollees`) VALUES
+(1, 12, 15, 17);
+
 -- --------------------------------------------------------
 
 --
@@ -88,6 +99,13 @@ CREATE TABLE `research5.3.2` (
   `no_job_applicants` int(255) NOT NULL,
   `no_newly_hired` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `research5.3.2`
+--
+
+INSERT INTO `research5.3.2` (`ID`, `no_job_applicants`, `no_newly_hired`) VALUES
+(1, 14, 15);
 
 -- --------------------------------------------------------
 
@@ -101,6 +119,14 @@ CREATE TABLE `research5.3.3` (
   `no_ppa` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `research5.3.3`
+--
+
+INSERT INTO `research5.3.3` (`ID`, `no_women_applicants`, `no_ppa`) VALUES
+(1, 15, 12),
+(2, 12, 15);
+
 -- --------------------------------------------------------
 
 --
@@ -112,11 +138,18 @@ CREATE TABLE `research5.3.4` (
   `no_ppa_women` int(255) NOT NULL,
   `no_internal_ppa` int(255) NOT NULL,
   `no_external_ppa` int(255) NOT NULL,
-  `title_ppa` varchar(255) NOT NULL,
-  `description_ppa` varchar(255) NOT NULL,
+  `title_ppa` text NOT NULL,
+  `description_ppa` text NOT NULL,
   `total_cost` int(255) NOT NULL,
   `fund_source` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `research5.3.4`
+--
+
+INSERT INTO `research5.3.4` (`ID`, `no_ppa_women`, `no_internal_ppa`, `no_external_ppa`, `title_ppa`, `description_ppa`, `total_cost`, `fund_source`) VALUES
+(1, 14, 15, 17, 'Rochelle', 'Short description', 15, 15);
 
 -- --------------------------------------------------------
 
@@ -130,13 +163,15 @@ CREATE TABLE `research5.3.5` (
   `title_ppa` varchar(255) NOT NULL,
   `description_ppa` varchar(255) NOT NULL,
   `total_cost1` int(255) NOT NULL,
-  `fund_source1` int(255) NOT NULL,
-  `categorized` varchar(255) NOT NULL,
-  `no_collaboration` int(255) NOT NULL,
-  `title_description_collab` varchar(255) NOT NULL,
-  `total_cost2` int(255) NOT NULL,
-  `fund_source2` int(255) NOT NULL
+  `fund_source1` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `research5.3.5`
+--
+
+INSERT INTO `research5.3.5` (`ID`, `no_encourage_woman`, `title_ppa`, `description_ppa`, `total_cost1`, `fund_source1`) VALUES
+(1, 15, 'Work Force', 'Women taking up the gap', 14, 0);
 
 -- --------------------------------------------------------
 
@@ -151,6 +186,13 @@ CREATE TABLE `research5.4.1` (
   `senior_staff` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `research5.4.1`
+--
+
+INSERT INTO `research5.4.1` (`ID`, `no_employees`, `academic_teaching_staff`, `senior_staff`) VALUES
+(1, 15, 18, 20);
+
 -- --------------------------------------------------------
 
 --
@@ -161,6 +203,13 @@ CREATE TABLE `research5.5.1` (
   `ID` int(255) NOT NULL,
   `total_graduates` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `research5.5.1`
+--
+
+INSERT INTO `research5.5.1` (`ID`, `total_graduates`) VALUES
+(1, 15);
 
 -- --------------------------------------------------------
 
@@ -186,6 +235,13 @@ CREATE TABLE `research5.5.3` (
   `no_art_humanities` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `research5.5.3`
+--
+
+INSERT INTO `research5.5.3` (`ID`, `total_no_STEM`, `no_graduate_medicine`, `no_art_humanities`) VALUES
+(1, 15, 18, 20);
+
 -- --------------------------------------------------------
 
 --
@@ -194,7 +250,7 @@ CREATE TABLE `research5.5.3` (
 
 CREATE TABLE `research5.6.1` (
   `ID` int(255) NOT NULL,
-  `no_non-discrimination` int(255) NOT NULL,
+  `no_non_discrimination` int(255) NOT NULL,
   `no_ppa_implemented` int(255) NOT NULL,
   `title_ppa` varchar(255) NOT NULL,
   `description_ppa` varchar(255) NOT NULL,
@@ -766,52 +822,58 @@ ALTER TABLE `research 5.11.1`
 --
 
 --
+-- AUTO_INCREMENT for table `research5.1.1`
+--
+ALTER TABLE `research5.1.1`
+  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `research5.2.1`
 --
 ALTER TABLE `research5.2.1`
-  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `research5.3.1`
 --
 ALTER TABLE `research5.3.1`
-  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `research5.3.2`
 --
 ALTER TABLE `research5.3.2`
-  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `research5.3.3`
 --
 ALTER TABLE `research5.3.3`
-  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `research5.3.4`
 --
 ALTER TABLE `research5.3.4`
-  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `research5.3.5`
 --
 ALTER TABLE `research5.3.5`
-  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `research5.4.1`
 --
 ALTER TABLE `research5.4.1`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `research5.5.1`
 --
 ALTER TABLE `research5.5.1`
-  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `research5.5.2`
@@ -823,7 +885,7 @@ ALTER TABLE `research5.5.2`
 -- AUTO_INCREMENT for table `research5.5.3`
 --
 ALTER TABLE `research5.5.3`
-  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `research5.6.1`
